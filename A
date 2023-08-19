@@ -1,0 +1,52 @@
+import sys
+import cv2 
+
+instructions = "1. A series of blank spaces will be presented in front of you, these blanks are indicative of a name of a character in a category you have chosen/n2. Depending on the difficulty you have chosen, you will have a certain number of tries you guess the name of the character/n 3. If you guess a letter that's in the character's name, it will appear on your screen, if you guess a letter that isn't in the name of the character, your number of guesses will go down by one /n4. If run out of all of your guesses, you lose. If you get the name beforehand, you win!"
+
+username = input("Welcome to Hangman! What is your name:")
+if isalpha(username) == True:
+    explanation = input("Hi " + username + "! /n If you don't need an explanation on how to play Hangman, press n, else press any other key than n:" )
+    if explanation == n:
+        #blank space
+    else:
+        print(instructions)
+else:
+    #use recursion to go back to the first statement
+
+counter = 0
+MarvelCharacters = ["captainamerica", "antman", "hawkeye", "wolverine", "ironman"]
+def marvel():
+    difficulty = input"(Now, would like to guess on normal dificculty (n) or challenge difficulty(c):")
+    if difficulty == "n" or "c":
+      if difficulty == "n":
+          GuessLimit = 7
+          MarvelCharacters.append("Hulk")
+      if difficulty == "c":
+          GuessLimit = 5
+    else:
+        print("Please type in either n or c")
+        #find a way to go back to the previous command
+
+
+DisneyCharacters = ["cinderella, "tiana", "belle", "mulan", "jasmine"]
+def disney():
+        difficulty = input"(Now, would like to guess on normal dificculty (n) or challenge difficulty(c):")
+    if difficulty == "n" or "c":
+      if difficulty == "n":
+          GuessLimit = 7
+          DisneyCharacters.append("Ariel")
+      if difficulty == "c":
+          GuessLimit = 5
+    else:
+        print("Please type in either n or c")
+        #find a way to go back to the previous command
+
+category = input("Now, would like to guess Disney Princesses(d) or Marvel Superheroes(m):")
+if category == "m" or "d":
+    if category == "m":
+      marvel()
+    if category == "d":
+      disney()
+else:
+    print("Make sure you input either 'm' or 'd'")
+    #find a way to go back to the beginning of the if statement
